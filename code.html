@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Dayana! 💝</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-frame {
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+            border: 10px solid #fff;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(255, 105, 180, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .message {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #666;
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(255, 182, 193, 0.1);
+            border-radius: 15px;
+        }
+
+        .counter {
+            font-size: 1.4em;
+            color: #ff69b4;
+            margin: 20px 0;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .love-btn {
+            background: #ff69b4;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 15px;
+        }
+
+        .love-btn:hover {
+            background: #ff1493;
+            transform: scale(1.1) rotate(-3deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Birthday My Sweetheart 🦋</h1>
+        
+        <div class="photo-frame">
+            <img src="https://drive.google.com/uc?export=view&id=1k0XXbyQxGFMRPMsvv49RS94u0qExjvLH" 
+                 alt="My Beautiful Dayana"
+                 onerror="this.src='https://i.imgur.com/3QZ5K7y.png'">
+        </div>
+
+        <div class="counter">
+            Days I've Cherished You: <span id="days">0</span>
+        </div>
+
+        <div class="message">
+            <p>Sayangku Dayana,</p>
+            <p>🌹 happy birthday cintaaa</p>
+            <p> HAHAAHAHAH DAH 19 TAHUN, ew dah tua HIHI</p>
+            <ul style="list-style: none; padding: 0;">
+                <li>💖 Please jangan berubah</li>
+                <li>🌸 dowan insecure lagi</li>
+                <li>🌙 dowan overthink okiee</li>
+                <li>🌟 i’ll always appreciate you</li>
+            </ul>
+            <p>i love you always and always and always and forever cempaka</p>
+            <p>mmuahh,<br>your babyboo 💌</p>
+        </div>
+
+        <button class="love-btn" onclick="createHearts()">Generate Love Sparks! ✨</button>
+    </div>
+
+    <script>
+        // Love counter calculation
+        const startDate = new Date('2024-06-15');
+        const today = new Date();
+        const diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+        document.getElementById('days').textContent = Math.max(diffDays, 0);
+
+        function createHearts() {
+            for(let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.style.position = 'fixed';
+                heart.style.left = Math.random() * 95 + 'vw';
+                heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+                heart.style.animation = `float ${Math.random() * 3 + 2}s linear`;
+                heart.innerHTML = '💖';
+                
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 5000);
+            }
+        }
+
+        // Floating animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% { transform: translateY(110vh) rotate(0deg); }
+                100% { transform: translateY(-10vh) rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
